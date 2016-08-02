@@ -1,7 +1,7 @@
 <?php
 ob_start();
-define('API_KEY','246736091:AAEIJN1cTOcVHgiLg1V8cgb1FDnEBdC8vnE');
-$the_admin_id = 149552131;
+define('API_KEY','258656612:AAHLxH0Nsz3zVRhdI_Hjtluf2I0N5GgJPUo');
+$the_admin_id = 227503412;
 
 file_put_contents("count",file_get_contents("count")+1);
 
@@ -204,7 +204,7 @@ echo 'QUERY ...';
                         'id'=>base64_encode(rand(5,555)),
                         'title'=>'برای ارسال کد کلیک کنید',
                         'input_message_content'=>[
-                            'message_text'=>'@BND95FILMBOT getlist-'.$theListId
+                            'message_text'=>'@AL1GHOL4MIBOT getlist-'.$theListId
                         ]
                     ]])
             ]));
@@ -410,7 +410,7 @@ https://telegram.me/mhrdev/834
 
 پس از اتمام کار ربات به شما یک کد مانند کد زیر می دهد .👇👇
 
-<pre>@BND95FILMBOT d6cdbea45b238632bdd6d11dcf7fe98f </pre>
+<pre>@AL1GHOL4MIBOT d6cdbea45b238632bdd6d11dcf7fe98f </pre>
 
 این کد را کپی کند و هر وقت خواستید بنر را نمایش دهید ( یا در تبادل ها به ادمین کانال دیگر بدهید ) از این کد استفاده کنید .
 
@@ -496,7 +496,7 @@ https://telegram.me/joinchat/linke_dovom
 این توکن را  ‌ذخیره کنید . سپس ربات را ادمین کانالتان کنید ( رباتی که خودتان ساختید )
 
 کد های اینلاین مانند :
-<code>@BND95FILMBOT getlist-XXXXX </code>
+<code>@AL1GHOL4MIBOT getlist-XXXXX </code>
 
 👈  حالا برای من کد inline تان را بفرستید : ( فعلا فقط لیست ها قبول هستند )".$cancel_Text,
                         'parse_mode'=>"HTML",
@@ -507,8 +507,8 @@ https://telegram.me/joinchat/linke_dovom
 
                 case '2':{
                     $code = $update->message->text;
-                    if(str_replace('@BND95FILMBOT getlist-','',$code) != $code){
-                        $code_list = trim(str_replace('@BND95FILMBOT getlist-','',$code));
+                    if(str_replace('@AL1GHOL4MIBOT getlist-','',$code) != $code){
+                        $code_list = trim(str_replace('@AL1GHOL4MIBOT getlist-','',$code));
                         $DB = getMakeDB($code_list,false);
                         if(isset($DB->done)){
                             makeHTTPRequest('sendMessage',[
@@ -541,7 +541,7 @@ https://telegram.me/joinchat/linke_dovom
                             'text'=>"❗️ کد شما غیر قابل قبول است .
 
 کد شما باید به شکل زیر باشد :
-<code>@BND95FILMBOT getlist-XXXXX </code>
+<code>@AL1GHOL4MIBOT getlist-XXXXX </code>
 
 توجه فرمایید فقط کد های List ها قبول هستند .".$cancel_Text,
                             'parse_mode'=>'HTML'
@@ -782,7 +782,7 @@ https://telegram.me/sscapachebot
 اگر بد توضیح دادم روی /help کلیک کن راهنمایی مفصل داره !'
                             ]);
 
-                            $theCommand = '@BND95FILMBOT getlist-'.ListTab::getCurrentMakeID($update->message->from->id);
+                            $theCommand = '@AL1GHOL4MIBOT getlist-'.ListTab::getCurrentMakeID($update->message->from->id);
                             makeHTTPRequest('sendMessage',[
                                 'chat_id'=>$update->message->from->id,
                                 'text'=>$theCommand,
@@ -990,7 +990,7 @@ https://telegram.me/sscapachebot
 اگر بد توضیح دادم روی /help کلیک کن راهنمایی مفصل داره !'
                     ]);
 
-                    $theCommand = '@BND95FILMBOT getlist-'.ListTab::getCurrentMakeID($update->message->from->id);
+                    $theCommand = '@AL1GHOL4MIBOT getlist-'.ListTab::getCurrentMakeID($update->message->from->id);
                     makeHTTPRequest('sendMessage',[
                         'chat_id'=>$update->message->from->id,
                         'text'=>$theCommand,
@@ -1186,7 +1186,7 @@ https://telegram.me/sscapachebot
 اگر بد توضیح دادم روی /help کلیک کن راهنمایی مفصل داره !'
                     ]);
 
-                    $theCommand = '@BND95FILMBOT getbanner-'.getCurrentMakeID($update->message->from->id);
+                    $theCommand = '@AL1GHOL4MIBOT getbanner-'.getCurrentMakeID($update->message->from->id);
                     makeHTTPRequest('sendMessage',[
                         'chat_id'=>$update->message->from->id,
                         'text'=>$theCommand,
@@ -1264,7 +1264,7 @@ https://telegram.me/sscapachebot
 //                        'chat_id'=>$userID
 //                    ]);
 //                    makeHTTPRequest('sendMessage',[
-//                        'text'=>'@BND95FILMBOT getbanner-'.getCurrentMakeID($userID),
+//                        'text'=>'@AL1GHOL4MIBOT getbanner-'.getCurrentMakeID($userID),
 //                        'chat_id'=>$userID
 //                    ]);
 //                }break;
@@ -1368,7 +1368,7 @@ https://telegram.me/sscapachebot
                         'chat_id'=>$userID
                     ]);
                     makeHTTPRequest('sendMessage',[
-                        'text'=>'@BND95FILMBOT getbanner-'.getCurrentMakeID($userID),
+                        'text'=>'@AL1GHOL4MIBOT getbanner-'.getCurrentMakeID($userID),
                         'chat_id'=>$userID
                     ]);
                 }break;
